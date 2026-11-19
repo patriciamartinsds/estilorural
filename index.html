@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estilo Rural Agro & Country — Portal informativo sobre cuidados com cavalos, notícias rurais, quiz equestre, moda country, cutelaria, flores e frutas.">
+    <title>Estilo Rural Agro & Country | Portal Informativo & Cultura Sertaneja</title>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuração de Design Tokens Rústicos -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        couro: '#3E2723',        /* Marrom Couro Rústico */
+                        'couro-dark': '#261714',
+                        'couro-light': '#5D4037',
+                        campo: '#2E7D32',        /* Verde Campo / Natureza */
+                        'campo-dark': '#1B5E20',
+                        terracota: '#D84315',    /* Laranja Terracota / Sertão */
+                        'terracota-dark': '#BF360C',
+                        creme: '#FAF9F6',        /* Off-White / Suave */
+                        areia: '#EFE5D3',
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'Merriweather', 'Times New Roman', 'serif'],
+                        sans: ['Inter', 'Arial', 'Helvetica', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Estilos Customizados Rústicos -->
+    <style>
+        /* Textura sutil de couro entalhado para cabeçalhos e destaques */
+        .bg-couro-textura {
+            background-color: #3E2723;
+            background-image: radial-gradient(rgba(239, 229, 211, 0.06) 1px, transparent 0);
+            background-size: 16px 16px;
+        }
+
+        .text-shadow-rustic {
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+        }
+
+        /* Animação suave de entrada */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-up {
+            animation: fadeUp 0.45s ease-out forwards;
+        }
+
+        /* Barra de rolagem personalizada */
+        ::-webkit-scrollbar {
+            width: 9px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF9F6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3E2723;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2E7D32;
+        }
+    </style>
+</head>
+<body class="bg-creme text-[#2B2421] font-sans antialiased selection:bg-terracota selection:text-white">
+
+    <!-- =========================================================================
+         FAIXA ACADÊMICA SUPERIOR (EE MARIA DA CONCEIÇÃO GONÇALVES CARRARA)
+    ========================================================================== -->
+    <div class="bg-couro-dark text-areia text-xs py-2 px-4 border-b border-couro-light">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-1 text-center md:text-left">
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
+                <span class="bg-terracota text-white px-2 py-0.5 rounded font-bold uppercase tracking-wider text-[10px]">Desenvolvimento Web</span>
+                <span><strong>EE Maria da Conceição Gonçalves Carrara</strong> • Aluna: <strong>Patrícia Martins da Silva</strong></span>
+            </div>
+            <div class="text-[11px] text-areia/80">
+                Prof.: Jose Antônio Tonello Ferreira • Portal Informativo 2026
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         CABEÇALHO & MENU DE NAVEGAÇÃO PRINCIPAL (SEM VENDAS / SEM CARRINHO)
+    ========================================================================== -->
+    <header class="sticky top-0 z-40 bg-couro-textura text-creme shadow-lg border-b-2 border-terracota">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- LOGOTIPO: Silhueta de cabeça de cavalo contornada por ramos de flores e couro -->
+                <a href="#inicio" class="flex items-center gap-3 group focus:outline-none">
+                    <div class="w-12 h-12 rounded-full bg-couro-dark border-2 border-terracota flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                        <svg class="w-8 h-8 text-areia" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <!-- Ramo floral esquerdo -->
+                            <path d="M12 46C8 38 8 26 14 18" stroke="#2E7D32" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="10" cy="32" r="2.2" fill="#D84315"/>
+                            <circle cx="12" cy="22" r="2" fill="#EFE5D3"/>
+                            <!-- Ramo floral direito -->
+                            <path d="M52 46C56 38 56 26 50 18" stroke="#2E7D32" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="54" cy="32" r="2.2" fill="#D84315"/>
+                            <circle cx="52" cy="22" r="2" fill="#EFE5D3"/>
+                            <!-- Silhueta estilizada de cabeça de cavalo -->
+                            <path d="M24 46C24 39 23 34 26 28L23 20L28 22L31 16L34 22C39 23 43 27 44 33C44.5 36 42 38 39 38L36 37C35 40 36 43 38 46H24Z" fill="#EFE5D3"/>
+                            <circle cx="33" cy="26" r="1.5" fill="#3E2723"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="block font-serif text-lg sm:text-xl font-bold text-white tracking-tight leading-none group-hover:text-areia transition-colors">
+                            Estilo Rural
+                        </span>
+                        <span class="block text-[11px] font-bold text-terracota tracking-widest uppercase mt-1">
+                            Agro &amp; Country
+                        </span>
+                    </div>
+                </a>
+
+                <!-- MENU DESKTOP -->
+                <nav class="hidden xl:flex items-center gap-1" aria-label="Navegação Principal">
+                    <a href="#inicio" class="px-3 py-2 rounded-lg text-sm font-semibold text-areia hover:bg-couro-light hover:text-white transition-all">Início</a>
+                    <a href="#noticias-cavalos" class="px-3 py-2 rounded-lg text-sm font-semibold text-areia hover:bg-couro-light hover:text-white transition-all">Notícias &amp; Cavalos</a>
+                    <a href="#quiz-equestre" class="px-3 py-2 rounded-lg text-sm font-semibold bg-campo/90 text-white hover:bg-campo transition-all shadow-sm">Quiz Equestre</a>
+                    <a href="#moda-country" class="px-3 py-2 rounded-lg text-sm font-semibold text-areia hover:bg-couro-light hover:text-white transition-all">Moda Country</a>
+                    <a href="#equestre-cutelaria" class="px-3 py-2 rounded-lg text-sm font-semibold text-areia hover:bg-couro-light hover:text-white transition-all">Equestre &amp; Cutelaria</a>
+                    <a href="#flores-frutas" class="px-3 py-2 rounded-lg text-sm font-semibold text-areia hover:bg-couro-light hover:text-white transition-all">Flores &amp; Frutas</a>
+                    <a href="#contato" class="px-3 py-2 rounded-lg text-sm font-semibold text-areia hover:bg-couro-light hover:text-white transition-all">Contato</a>
+                </nav>
+
+                <!-- BOTÃO HAMBÚRGUER MOBILE / TABLET -->
+                <div class="xl:hidden flex items-center">
+                    <button id="btnMobileMenu" type="button" onclick="toggleMenuMobile()" class="p-2.5 rounded-xl bg-couro-light text-areia hover:bg-terracota hover:text-white transition-colors focus:outline-none" aria-label="Abrir Menu de Navegação" aria-expanded="false">
+                        <svg id="iconOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                        <svg id="iconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- MENU MOBILE EXPANSÍVEL -->
+            <nav id="mobileMenu" class="hidden xl:hidden pb-4 pt-2 border-t border-couro-light space-y-1" aria-label="Navegação Mobile">
+                <a href="#inicio" onclick="fecharMenuMobile()" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-areia hover:bg-couro-light">Início</a>
+                <a href="#noticias-cavalos" onclick="fecharMenuMobile()" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-areia hover:bg-couro-light">Notícias &amp; Cavalos</a>
+                <a href="#quiz-equestre" onclick="fecharMenuMobile()" class="block px-4 py-2.5 rounded-lg text-sm font-bold bg-campo text-white">Quiz Equestre</a>
+                <a href="#moda-country" onclick="fecharMenuMobile()" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-areia hover:bg-couro-light">Moda Country</a>
+                <a href="#equestre-cutelaria" onclick="fecharMenuMobile()" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-areia hover:bg-couro-light">Equestre &amp; Cutelaria</a>
+                <a href="#flores-frutas" onclick="fecharMenuMobile()" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-areia hover:bg-couro-light">Flores &amp; Frutas</a>
+                <a href="#contato" onclick="fecharMenuMobile()" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-areia hover:bg-couro-light">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- =====================================================================
+             1. HERO SECTION (BANNER PRINCIPAL)
+        ====================================================================== -->
+        <section id="inicio" class="relative min-h-[580px] md:min-h-[650px] flex items-center bg-couro-dark overflow-hidden">
+            <!-- Imagem principal cavalobanner.jpg com fallback automático -->
+            <img src="cavalobanner.jpg"
+                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1600&q=80';"
+                 alt="Cavalo galopando em campo aberto ao entardecer"
+                 class="absolute inset-0 w-full h-full object-cover object-center opacity-55">
+
+            <!-- Gradiente de contraste para leitura impecável -->
+            <div class="absolute inset-0 bg-gradient-to-r from-couro-dark/95 via-couro-dark/75 to-couro-dark/25"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+                <div class="max-w-3xl">
+                    <span class="inline-flex items-center gap-2 bg-terracota text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full shadow-md mb-6">
+                        <span>✦</span> Cultura Rural • Manejo Equino • Tradição
+                    </span>
+
+                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-shadow-rustic">
+                        A Essência do Campo e da Tradição Sertaneja em Um Só Lugar
+                    </h1>
+
+                    <p class="text-base sm:text-lg md:text-xl text-areia/95 leading-relaxed mb-9 max-w-2xl">
+                        Explore notícias atualizadas sobre o universo agro, aprenda cuidados essenciais com cavalos, descubra os segredos da moda country, da cutelaria artesanal e do cultivo de flores e frutas no campo.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#noticias-cavalos" class="inline-flex items-center justify-center gap-2 bg-campo hover:bg-campo-dark text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 text-base">
+                            <span>Ler Notícias</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+                            </svg>
+                        </a>
+
+                        <a href="#quiz-equestre" class="inline-flex items-center justify-center gap-2 bg-terracota hover:bg-terracota-dark text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 text-base">
+                            <span>Fazer o Quiz</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BARRA DE PILARES INFORMATIVOS -->
+        <section class="relative z-20 -mt-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl border border-areia p-6 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="p-2">
+                    <span class="block font-serif text-2xl sm:text-3xl font-bold text-couro">Bem-Estar</span>
+                    <span class="text-xs font-bold text-campo uppercase tracking-wider mt-1 block">Manejo &amp; Saúde Equina</span>
+                </div>
+                <div class="p-2">
+                    <span class="block font-serif text-2xl sm:text-3xl font-bold text-couro">Notícias</span>
+                    <span class="text-xs font-bold text-terracota uppercase tracking-wider mt-1 block">Fontes Reais do Agro</span>
+                </div>
+                <div class="p-2">
+                    <span class="block font-serif text-2xl sm:text-3xl font-bold text-couro">Quiz</span>
+                    <span class="text-xs font-bold text-campo uppercase tracking-wider mt-1 block">Desafio Curiosidades</span>
+                </div>
+                <div class="p-2">
+                    <span class="block font-serif text-2xl sm:text-3xl font-bold text-couro">Cultura</span>
+                    <span class="text-xs font-bold text-terracota uppercase tracking-wider mt-1 block">Moda, Couro &amp; Campo</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             2. SEÇÃO NOTÍCIAS & CUIDADOS COM CAVALOS (COM LINKS REAIS DA WEB)
+        ====================================================================== -->
+        <section id="noticias-cavalos" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-terracota font-bold text-xs uppercase tracking-widest block mb-2">Jornalismo Agro &amp; Bem-Estar Animal</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-couro">Notícias &amp; Cuidados com Cavalos</h2>
+                <p class="text-gray-600 mt-3 text-sm sm:text-base">
+                    Acompanhe reportagens reais publicadas nos principais portais do agronegócio brasileiro e guias técnicos sobre nutrição, hidratação, casqueamento e saúde equina.
+                </p>
+                <div class="w-20 h-1 bg-campo mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Grid de Notícias e Guias de Cuidados -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- CARD 1: CANAL RURAL -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-md border border-areia flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <div class="relative h-52 overflow-hidden bg-areia">
+                            <img src="cavalobanho.jpg"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80';"
+                                 alt="Cavalo recebendo cuidados e higiene no haras"
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-couro text-white text-[11px] font-bold uppercase px-3 py-1 rounded-lg shadow">
+                                Canal Rural
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-bold text-campo uppercase tracking-wider">Higiene &amp; Manejo Diário</span>
+                            <h3 class="font-serif text-xl font-bold text-couro mt-1 mb-3">
+                                Cuidados essenciais com higiene, escovação e banho dos cavalos
+                            </h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                A escovação diária estimula a circulação sanguínea da pelagem, remove impurezas que causam dermatites e fortalece o vínculo de confiança entre cavaleiro e animal.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-2 flex flex-col sm:flex-row gap-2.5">
+                        <button type="button" onclick="abrirResumoNoticia('higiene')" class="flex-1 px-4 py-2.5 rounded-xl bg-areia hover:bg-couro hover:text-white text-couro font-bold text-xs transition-colors">
+                            Ler Resumo
+                        </button>
+                        <a href="https://www.canalrural.com.br/pecuaria/cavalo/" target="_blank" rel="noopener noreferrer" class="flex-1 px-4 py-2.5 rounded-xl bg-campo hover:bg-campo-dark text-white font-bold text-xs text-center inline-flex items-center justify-center gap-1.5 transition-colors">
+                            <span>Portal Canal Rural</span>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- CARD 2: COMPRE RURAL -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-md border border-areia flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <div class="relative h-52 overflow-hidden bg-areia">
+                            <img src="cavalovet.jpg"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=800&q=80';"
+                                 alt="Veterinário avaliando a saúde e nutrição de um cavalo"
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-terracota text-white text-[11px] font-bold uppercase px-3 py-1 rounded-lg shadow">
+                                Compre Rural
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-bold text-campo uppercase tracking-wider">Nutrição &amp; Hidratação</span>
+                            <h3 class="font-serif text-xl font-bold text-couro mt-1 mb-3">
+                                Alimentação equilibrada e prevenção de cólicas em equinos
+                            </h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Por possuírem estômago pequeno e digestão sensível, os cavalos precisam de volumoso de qualidade (feno ou pastagem) dividido em várias porções e água limpa constante.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-2 flex flex-col sm:flex-row gap-2.5">
+                        <button type="button" onclick="abrirResumoNoticia('nutricao')" class="flex-1 px-4 py-2.5 rounded-xl bg-areia hover:bg-couro hover:text-white text-couro font-bold text-xs transition-colors">
+                            Ler Resumo
+                        </button>
+                        <a href="https://www.comprerural.com/category/pecuaria/equinos/" target="_blank" rel="noopener noreferrer" class="flex-1 px-4 py-2.5 rounded-xl bg-campo hover:bg-campo-dark text-white font-bold text-xs text-center inline-flex items-center justify-center gap-1.5 transition-colors">
+                            <span>Portal Compre Rural</span>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- CARD 3: GLOBO RURAL -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-md border border-areia flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <div class="relative h-52 overflow-hidden bg-areia">
+                            <img src="https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&w=800&q=80"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/800x500/3E2723/FAF9F6?text=Globo+Rural+Equinos';"
+                                 alt="Cavalos no pasto em propriedade rural"
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-campo text-white text-[11px] font-bold uppercase px-3 py-1 rounded-lg shadow">
+                                Globo Rural
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-bold text-terracota uppercase tracking-wider">Criação &amp; Mercado Agro</span>
+                            <h3 class="font-serif text-xl font-bold text-couro mt-1 mb-3">
+                                Equideocultura brasileira: raças nacionais e cuidados com cascos
+                            </h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                O Brasil possui um dos maiores rebanhos equinos do mundo. Manter o casqueamento periódico a cada 45 dias evita lesões articulares e garante o aprumo ideal na lida.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6 pt-2 flex flex-col sm:flex-row gap-2.5">
+                        <button type="button" onclick="abrirResumoNoticia('cascos')" class="flex-1 px-4 py-2.5 rounded-xl bg-areia hover:bg-couro hover:text-white text-couro font-bold text-xs transition-colors">
+                            Ler Resumo
+                        </button>
+                        <a href="https://globorural.globo.com/pecuaria/" target="_blank" rel="noopener noreferrer" class="flex-1 px-4 py-2.5 rounded-xl bg-campo hover:bg-campo-dark text-white font-bold text-xs text-center inline-flex items-center justify-center gap-1.5 transition-colors">
+                            <span>Portal Globo Rural</span>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- CARD 4: EMBRAPA (PESQUISA E SANIDADE) -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-md border border-areia flex flex-col justify-between hover:shadow-xl transition-all md:col-span-2 lg:col-span-3">
+                    <div class="grid grid-cols-1 lg:grid-cols-12">
+                        <div class="lg:col-span-4 relative min-h-[220px] bg-couro">
+                            <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=900&q=80"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/800x500/2E7D32/FAF9F6?text=Embrapa+Pesquisa+Agro';"
+                                 alt="Pesquisa agropecuária e pastagens sustentáveis"
+                                 class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-couro text-areia text-[11px] font-bold uppercase px-3 py-1 rounded-lg border border-areia/30">
+                                Embrapa • Ciência &amp; Campo
+                            </span>
+                        </div>
+                        <div class="lg:col-span-8 p-6 sm:p-8 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-campo uppercase tracking-wider">Sanidade Animal &amp; Pastagens</span>
+                                <h3 class="font-serif text-2xl font-bold text-couro mt-1 mb-3">
+                                    Calendário sanitário, vacinação e manejo de pastagens para equídeos
+                                </h3>
+                                <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                                    Segundo recomendações técnicas da Empresa Brasileira de Pesquisa Agropecuária (Embrapa), a prevenção contra anemia infecciosa equina, influenza, tétano e encefalomielite, aliada ao controle estratégico de parasitas e rotação de pastagens, assegura longevidade e vigor aos animais de trabalho e esporte.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-3 pt-2">
+                                <a href="https://www.embrapa.br/busca-de-noticias/-/noticia/busca/equinos" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-couro hover:bg-couro-light text-white font-bold text-xs inline-flex items-center gap-2 transition-colors">
+                                    <span>Acessar Publicações na Embrapa</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                                </a>
+                                <span class="text-xs text-gray-500">Fonte oficial: embrapa.br</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             3. QUIZ INTERATIVO SOBRE CURIOSIDADES DOS CAVALOS (COM PONTUAÇÃO)
+        ====================================================================== -->
+        <section id="quiz-equestre" class="py-16 md:py-24 bg-couro-textura text-creme border-y-4 border-terracota">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Cabeçalho do Quiz -->
+                <div class="text-center mb-10">
+                    <span class="inline-block bg-terracota text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1 rounded-full mb-3">
+                        Desafio Interativo
+                    </span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+                        Quiz: Curiosidades do Mundo dos Cavalos
+                    </h2>
+                    <p class="text-areia/90 mt-2 text-sm sm:text-base max-w-2xl mx-auto">
+                        Teste seus conhecimentos sobre anatomia, comportamento, sentidos e raças equinas. Responda às 7 perguntas e descubra sua patente no haras!
+                    </p>
+                </div>
+
+                <!-- Card Principal do Quiz -->
+                <div class="bg-creme text-[#2B2421] rounded-2xl shadow-2xl border-2 border-areia overflow-hidden">
+
+                    <!-- Barra Superior de Status & Pontuação -->
+                    <div class="bg-areia px-6 py-4 flex flex-wrap items-center justify-between gap-4 border-b border-couro/15">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-campo"></span>
+                            <span id="quizProgressoTexto" class="font-bold text-sm text-couro">Pergunta 1 de 7</span>
+                        </div>
+                        <div class="bg-couro text-white px-4 py-1.5 rounded-xl text-xs sm:text-sm font-bold shadow-sm">
+                            Pontuação: <span id="quizPontuacaoAtual" class="text-terracota font-extrabold text-base">0</span> pts
+                        </div>
+                    </div>
+
+                    <!-- Barra de Progresso Visual -->
+                    <div class="w-full bg-gray-200 h-2.5">
+                        <div id="quizBarraProgresso" class="bg-campo h-2.5 transition-all duration-500" style="width: 14.28%;"></div>
+                    </div>
+
+                    <!-- Área das Perguntas (Ativa durante o jogo) -->
+                    <div id="quizContainerAtivo" class="p-6 sm:p-8 md:p-10">
+                        <span id="quizCategoriaTag" class="inline-block text-xs font-extrabold uppercase tracking-wider text-terracota mb-2">
+                            Sentidos &amp; Anatomia
+                        </span>
+
+                        <h3 id="quizPerguntaTitulo" class="font-serif text-xl sm:text-2xl font-bold text-couro mb-6 leading-snug">
+                            Carregando pergunta...
+                        </h3>
+
+                        <!-- Alternativas -->
+                        <div id="quizOpcoesContainer" class="space-y-3">
+                            <!-- Botões inseridos via JavaScript -->
+                        </div>
+
+                        <!-- Caixa de Feedback Imediato -->
+                        <div id="quizFeedbackBox" class="hidden mt-6 p-4 rounded-xl border text-sm leading-relaxed animate-fade-up">
+                            <p id="quizFeedbackTitulo" class="font-bold mb-1"></p>
+                            <p id="quizFeedbackExplicacao"></p>
+                        </div>
+
+                        <!-- Botão Avançar -->
+                        <div class="mt-6 flex justify-end">
+                            <button id="btnProximaPergunta" type="button" onclick="proximaPerguntaQuiz()" class="hidden bg-campo hover:bg-campo-dark text-white font-bold px-6 py-3 rounded-xl shadow transition-all inline-flex items-center gap-2">
+                                <span id="textoBtnProxima">Próxima Pergunta</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tela de Resultado Final (Oculta até terminar) -->
+                    <div id="quizResultadoContainer" class="hidden p-8 sm:p-10 text-center animate-fade-up">
+                        <div id="quizMedalhaIcone" class="w-20 h-20 mx-auto rounded-full bg-areia border-4 border-terracota flex items-center justify-center text-4xl mb-4 shadow-md">
+                            🏆
+                        </div>
+
+                        <span class="text-xs font-bold uppercase tracking-widest text-campo block mb-1">Resultado Final</span>
+                        <h3 id="quizPatenteTitulo" class="font-serif text-2xl sm:text-3xl font-bold text-couro mb-2">
+                            Mestre do Haras
+                        </h3>
+
+                        <p class="text-lg font-bold text-terracota mb-4">
+                            Você acertou <span id="quizAcertosFinais">0</span> de 7 perguntas (<span id="quizPontosFinais">0</span> pontos)!
+                        </p>
+
+                        <p id="quizMensagemFinal" class="text-sm sm:text-base text-gray-600 max-w-xl mx-auto mb-8 leading-relaxed">
+                            Excelente desempenho!
+                        </p>
+
+                        <button type="button" onclick="reiniciarQuiz()" class="bg-couro hover:bg-couro-light text-white font-bold px-8 py-3.5 rounded-xl shadow-lg transition-all inline-flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                            <span>Refazer o Quiz</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             4. SEÇÃO MODA COUNTRY (ESTILO, VESTIMENTAS E DICAS — SEM VENDAS)
+        ====================================================================== -->
+        <section id="moda-country" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-12">
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                        <img src="modacountry.jpg"
+                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=900&q=80';"
+                             alt="Moda Country com chapéus, jaqueta de couro, franjas e botas"
+                             class="w-full h-[420px] object-cover">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-couro-dark/90 to-transparent p-5 text-white">
+                            <span class="text-xs font-bold uppercase tracking-wider text-terracota">Guia de Estilo Sertanejo</span>
+                            <p class="font-serif text-lg font-bold">Autenticidade do campo às festas de peão</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <span class="text-campo font-bold text-xs uppercase tracking-widest block mb-2">Cultura &amp; Identidade Visual</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-couro mb-4">
+                        Moda Country: Vestimentas, Tradição e Estilo
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
+                        A moda country nasceu da funcionalidade exigida pela lida no campo — tecidos resistentes, proteção contra o sol e botas adequadas para estribos — e evoluiu para um ícone cultural presente em rodeios, cavalgadas e no dia a dia urbano. Conheça as peças essenciais de cada perfil:
+                    </p>
+
+                    <!-- Abas Interativas de Estilo (Feminino, Masculino, Infantil, Acessórios) -->
+                    <div class="flex flex-wrap gap-2 mb-6" role="tablist" aria-label="Categorias de Estilo Country">
+                        <button type="button" onclick="mudarAbaModa('feminino')" class="aba-moda px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-couro text-white shadow transition-all" data-aba="feminino">
+                            Feminino
+                        </button>
+                        <button type="button" onclick="mudarAbaModa('masculino')" class="aba-moda px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-areia text-couro hover:bg-couro/15 transition-all" data-aba="masculino">
+                            Masculino
+                        </button>
+                        <button type="button" onclick="mudarAbaModa('infantil')" class="aba-moda px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-areia text-couro hover:bg-couro/15 transition-all" data-aba="infantil">
+                            Infantil
+                        </button>
+                        <button type="button" onclick="mudarAbaModa('acessorios')" class="aba-moda px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-areia text-couro hover:bg-couro/15 transition-all" data-aba="acessorios">
+                            Acessórios Unissex
+                        </button>
+                    </div>
+
+                    <!-- Painel Dinâmico da Aba Selecionada -->
+                    <div id="painelModaCountry" class="bg-white rounded-2xl p-6 sm:p-7 border border-areia shadow-md animate-fade-up">
+                        <!-- Conteúdo preenchido via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             5. SEÇÃO EQUESTRE & CUTELARIA (ARTIGOS EDUCATIVOS E CURIOSIDADES)
+        ====================================================================== -->
+        <section id="equestre-cutelaria" class="py-16 md:py-24 bg-areia/45 border-y border-areia">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-terracota font-bold text-xs uppercase tracking-widest block mb-2">Ofícios Artesanais do Campo</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-couro">Equestre &amp; Cutelaria Artesanal</h2>
+                    <p class="text-gray-600 mt-3 text-sm sm:text-base">
+                        Conheça a história, os materiais e as curiosidades por trás da selaria tradicional e da cutelaria campeira feita à mão.
+                    </p>
+                    <div class="w-20 h-1 bg-couro mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Card 1: Selaria e Couro Entalhado -->
+                    <div class="bg-white rounded-2xl p-7 border border-areia shadow-md hover:shadow-lg transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-couro text-areia flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                        </div>
+                        <span class="text-xs font-bold uppercase text-campo tracking-wider">Selaria Tradicional</span>
+                        <h3 class="font-serif text-xl font-bold text-couro mt-1 mb-3">
+                            A Arte das Selas de Couro e Arreios Reforçados
+                        </h3>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                            Cada região do Brasil desenvolveu modelos próprios de selas — como a <strong>sela australiana</strong>, a <strong>americana</strong> e a <strong>cabeça de arreio</strong>. O couro bovino curtido ao tanino recebe gravações florais feitas com sovela e martelo, garantindo resistência por décadas.
+                        </p>
+                        <div class="bg-creme p-3.5 rounded-xl border border-areia text-xs text-couro">
+                            <strong>Curiosidade:</strong> O suador (parte inferior da sela) é preenchido tradicionalmente com lã ou feltro natural para absorver o impacto e proteger o dorso do cavalo.
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Cutelaria Campeira -->
+                    <div class="bg-white rounded-2xl p-7 border border-areia shadow-md hover:shadow-lg transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-terracota text-white flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"/></svg>
+                        </div>
+                        <span class="text-xs font-bold uppercase text-terracota tracking-wider">Forja &amp; Aço</span>
+                        <h3 class="font-serif text-xl font-bold text-couro mt-1 mb-3">
+                            Segredos da Cutelaria Artesanal Campeira
+                        </h3>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                            Na cutelaria rústica, o cuteleiro forja lâminas em <strong>aço carbono 1070/1095</strong> ou <strong>aço damasco</strong>, realizando a têmpera térmica para unir dureza no fio e flexibilidade. Os cabos utilizam madeiras nobres certificadas (como guajuvira e imbuia) ou chifre natural.
+                        </p>
+                        <div class="bg-creme p-3.5 rounded-xl border border-areia text-xs text-couro">
+                            <strong>Curiosidade:</strong> Facas de aço carbono desenvolvem com o tempo uma camada escura chamada "pátina", que ajuda a proteger a lâmina contra oxidação profunda.
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Conservação do Couro -->
+                    <div class="bg-white rounded-2xl p-7 border border-areia shadow-md hover:shadow-lg transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-campo text-white flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <span class="text-xs font-bold uppercase text-campo tracking-wider">Manutenção Rústica</span>
+                        <h3 class="font-serif text-xl font-bold text-couro mt-1 mb-3">
+                            Como Conservar Couros, Cintos e Bainhas
+                        </h3>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                            O couro é uma fibra natural que precisa de hidratação periódica. Após o uso em dias de chuva ou poeira, recomenda-se limpar com pano úmido, secar sempre à sombra e aplicar óleo de mocotó ou cera de abelha para evitar ressecamento e rachaduras.
+                        </p>
+                        <div class="bg-creme p-3.5 rounded-xl border border-areia text-xs text-couro">
+                            <strong>Dica de Ouro:</strong> Nunca guarde facas dentro da bainha de couro por longos períodos, pois a umidade retida no couro pode oxidar o aço.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             6. SEÇÃO FLORES & FRUTAS (ARTIGOS DE CULTIVO E CURIOSIDADES)
+        ====================================================================== -->
+        <section id="flores-frutas" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <div class="lg:col-span-7 order-2 lg:order-1">
+                    <span class="text-campo font-bold text-xs uppercase tracking-widest block mb-2">Hortifrúti, Pomar &amp; Jardinagem</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-couro mb-4">
+                        Flores &amp; Frutas: Cultivo Tropical e Sabores da Estação
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-8">
+                        A riqueza dos pomares e jardins rurais transforma propriedades e quintais em fontes de saúde, biodiversidade e beleza. Confira guias práticos e curiosidades sobre o cultivo no clima brasileiro:
+                    </p>
+
+                    <div class="space-y-5">
+                        <!-- Artigo / Curiosidade 1 -->
+                        <div class="bg-white p-5 rounded-2xl border border-areia shadow-sm flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-campo/15 text-campo flex items-center justify-center font-bold shrink-0 text-lg">
+                                🌱
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-lg font-bold text-couro">Cultivo de Árvores Frutíferas no Clima Tropical</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 mt-1 leading-relaxed">
+                                    Espécies como mangueira, jabuticabeira, laranjeira e goiabeira adaptam-se perfeitamente ao solo brasileiro quando plantadas em covas preparadas com composto orgânico e húmus de minhoca. A poda de limpeza anual abre a copa para o sol e reduz pragas naturalmente.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Artigo / Curiosidade 2 -->
+                        <div class="bg-white p-5 rounded-2xl border border-areia shadow-sm flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-terracota/15 text-terracota flex items-center justify-center font-bold shrink-0 text-lg">
+                                🌻
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-lg font-bold text-couro">Flores do Campo e Polinização Natural</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 mt-1 leading-relaxed">
+                                    Plantar girassóis, margaridas, lavandas e ipês próximos a pomares atrai abelhas nativas sem ferrão e borboletas, aumentando em até 40% a frutificação das árvores ao redor.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Artigo / Curiosidade 3 -->
+                        <div class="bg-white p-5 rounded-2xl border border-areia shadow-sm flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-couro/10 text-couro flex items-center justify-center font-bold shrink-0 text-lg">
+                                🍉
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-lg font-bold text-couro">Curiosidade: Frutas da Estação São Mais Nutritivas</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 mt-1 leading-relaxed">
+                                    Colher frutas respeitando seu ciclo natural de safra (como melancia e manga no verão, e mexerica e morango no inverno) garante maior concentração de vitaminas, aroma intenso e menor necessidade de defensivos agrícolas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 order-1 lg:order-2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                        <img src="floresefrutas.jpg"
+                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=900&q=80';"
+                             alt="Arranjo criativo de flores do campo e frutas frescas da estação"
+                             class="w-full h-[460px] object-cover">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-couro-dark/90 to-transparent p-5 text-white">
+                            <span class="text-xs font-bold uppercase tracking-wider text-campo bg-white px-2.5 py-0.5 rounded">Natureza Viva</span>
+                            <p class="font-serif text-lg font-bold mt-2">Harmonia entre pomar, horta e floricultura</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             7. SEÇÃO CONTATO
+        ====================================================================== -->
+        <section id="contato" class="py-16 md:py-24 bg-areia/50 border-t border-areia">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-campo font-bold text-xs uppercase tracking-widest block mb-2">Fale Conosco</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-couro">Contato &amp; Sugestões de Pauta</h2>
+                    <p class="text-gray-600 mt-2 text-sm sm:text-base">
+                        Tem alguma dúvida sobre cuidados com cavalos, sugestão de curiosidade ou comentário sobre o projeto escolar? Envie sua mensagem!
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Cartão de Informações -->
+                    <div class="lg:col-span-5 bg-couro-textura text-creme p-8 rounded-2xl shadow-lg space-y-6">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-white mb-2">Estilo Rural Agro &amp; Country</h3>
+                            <p class="text-xs text-areia/80 leading-relaxed">
+                                Portal informativo desenvolvido como trabalho de Desenvolvimento Web — EE Maria da Conceição Gonçalves Carrara.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4 pt-4 border-t border-couro-light text-sm">
+                            <div class="flex items-start gap-3">
+                                <span class="text-terracota font-bold">📍</span>
+                                <div>
+                                    <strong class="block text-white">Instituição</strong>
+                                    <span class="text-areia/90 text-xs">EE Maria da Conceição Gonçalves Carrara</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <span class="text-terracota font-bold">👩‍🎓</span>
+                                <div>
+                                    <strong class="block text-white">Autoria &amp; Orientação</strong>
+                                    <span class="text-areia/90 text-xs">Aluna: Patrícia Martins da Silva<br>Prof.: Jose Antônio Tonello Ferreira</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <span class="text-terracota font-bold">📱</span>
+                                <div>
+                                    <strong class="block text-white">Canais Digitais</strong>
+                                    <span class="text-areia/90 text-xs">WhatsApp: (32) 99865-5059 • @estiloruralagro</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulário de Contato Funcional -->
+                    <div class="lg:col-span-7 bg-white p-8 rounded-2xl shadow-md border border-areia">
+                        <form id="formContato" onsubmit="enviarFormularioContato(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="contatoNome" class="block text-xs font-bold text-couro uppercase tracking-wider mb-1.5">Seu Nome</label>
+                                    <input type="text" id="contatoNome" required placeholder="Ex: João da Silva" class="w-full px-4 py-3 rounded-xl border border-areia bg-creme text-sm focus:outline-none focus:ring-2 focus:ring-campo">
+                                </div>
+                                <div>
+                                    <label for="contatoEmail" class="block text-xs font-bold text-couro uppercase tracking-wider mb-1.5">Seu E-mail</label>
+                                    <input type="email" id="contatoEmail" required placeholder="voce@exemplo.com" class="w-full px-4 py-3 rounded-xl border border-areia bg-creme text-sm focus:outline-none focus:ring-2 focus:ring-campo">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="contatoAssunto" class="block text-xs font-bold text-couro uppercase tracking-wider mb-1.5">Tema da Mensagem</label>
+                                <select id="contatoAssunto" class="w-full px-4 py-3 rounded-xl border border-areia bg-creme text-sm focus:outline-none focus:ring-2 focus:ring-campo">
+                                    <option value="Cavalos">Notícias &amp; Cuidados com Cavalos</option>
+                                    <option value="Quiz">Sugestão de Pergunta para o Quiz</option>
+                                    <option value="Moda">Moda Country &amp; Estilo</option>
+                                    <option value="Cutelaria">Equestre &amp; Cutelaria</option>
+                                    <option value="Flores">Flores, Frutas &amp; Cultivo</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="contatoMensagem" class="block text-xs font-bold text-couro uppercase tracking-wider mb-1.5">Mensagem</label>
+                                <textarea id="contatoMensagem" rows="4" required placeholder="Escreva sua mensagem ou sugestão de artigo..." class="w-full px-4 py-3 rounded-xl border border-areia bg-creme text-sm focus:outline-none focus:ring-2 focus:ring-campo"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-campo hover:bg-campo-dark text-white font-bold py-3.5 rounded-xl shadow-md transition-all flex items-center justify-center gap-2">
+                                <span>Enviar Mensagem</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================================
+         8. RODAPÉ (FOOTER)
+    ========================================================================== -->
+    <footer class="bg-couro-dark text-areia border-t-4 border-couro-light pt-14 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-couro-light">
+                <div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Estilo Rural Agro &amp; Country</h3>
+                    <p class="text-xs text-areia/80 leading-relaxed">
+                        Portal educativo e informativo dedicado à preservação da cultura sertaneja, bem-estar animal, manejo equino, moda country, cutelaria artesanal e cultivo rural.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-base font-bold text-white mb-3">Seções do Portal</h4>
+                    <ul class="space-y-2 text-xs text-areia/85">
+                        <li><a href="#inicio" class="hover:text-terracota transition-colors">Início</a></li>
+                        <li><a href="#noticias-cavalos" class="hover:text-terracota transition-colors">Notícias &amp; Cuidados com Cavalos</a></li>
+                        <li><a href="#quiz-equestre" class="hover:text-terracota transition-colors">Quiz Interativo sobre Cavalos</a></li>
+                        <li><a href="#moda-country" class="hover:text-terracota transition-colors">Moda Country</a></li>
+                        <li><a href="#equestre-cutelaria" class="hover:text-terracota transition-colors">Equestre &amp; Cutelaria</a></li>
+                        <li><a href="#flores-frutas" class="hover:text-terracota transition-colors">Flores &amp; Frutas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-base font-bold text-white mb-3">Créditos Acadêmicos</h4>
+                    <ul class="space-y-1.5 text-xs text-areia/85">
+                        <li><strong>Escola:</strong> EE Maria da Conceição Gonçalves Carrara</li>
+                        <li><strong>Disciplina:</strong> Desenvolvimento Web</li>
+                        <li><strong>Aluna:</strong> Patrícia Martins da Silva</li>
+                        <li><strong>Professor:</strong> Jose Antônio Tonello Ferreira</li>
+                        <li><strong>Data:</strong> 01/10/2026</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-areia/70 text-center">
+                <p>Direitos autorais &copy; 2026 Estilo Rural Agro &amp; Country. Todos os direitos reservados.</p>
+                <p>Redes Sociais: @estiloruralagro • Portal Informativo &amp; Cultural</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================================================
+         MODAL DE LEITURA DE RESUMO DE NOTÍCIA
+    ========================================================================== -->
+    <div id="modalResumo" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modalResumoTitulo">
+        <div class="bg-white rounded-2xl max-w-xl w-full overflow-hidden shadow-2xl border border-areia animate-fade-up">
+            <div class="bg-couro text-white px-6 py-4 flex items-center justify-between">
+                <span id="modalResumoFonte" class="text-xs font-bold uppercase tracking-wider text-terracota">Resumo Informativo</span>
+                <button type="button" onclick="fecharResumoNoticia()" class="w-8 h-8 rounded-full bg-couro-light text-white hover:bg-terracota flex items-center justify-center font-bold transition-colors" aria-label="Fechar janela">✕</button>
+            </div>
+            <div class="p-6 sm:p-8 space-y-4">
+                <h3 id="modalResumoTitulo" class="font-serif text-2xl font-bold text-couro"></h3>
+                <div id="modalResumoTexto" class="text-sm text-gray-700 leading-relaxed space-y-3"></div>
+                <div class="pt-4 border-t border-areia flex flex-wrap items-center justify-between gap-3">
+                    <button type="button" onclick="fecharResumoNoticia()" class="px-5 py-2.5 rounded-xl bg-areia text-couro font-bold text-xs hover:bg-couro hover:text-white transition-colors">
+                        Fechar Resumo
+                    </button>
+                    <a id="modalResumoLinkExterno" href="#" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-campo hover:bg-campo-dark text-white font-bold text-xs inline-flex items-center gap-2 transition-colors">
+                        <span>Ler Reportagens no Portal Oficial</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         NOTIFICAÇÃO TOAST (FEEDBACK VISUAL)
+    ========================================================================== -->
+    <div id="toastNotificacao" class="fixed bottom-5 right-5 z-50 bg-couro text-white px-5 py-3.5 rounded-xl shadow-2xl border-l-4 border-campo hidden items-center gap-3 animate-fade-up">
+        <span class="text-lg">🌾</span>
+        <span id="toastTexto" class="text-sm font-medium">Mensagem enviada!</span>
+    </div>
+
+    <!-- =========================================================================
+         JAVASCRIPT COMPLETO (QUIZ, ABAS MODA COUNTRY, MODAIS E NAVEGAÇÃO)
+    ========================================================================== -->
+    <script>
+        /* =====================================================================
+           1. DADOS E LÓGICA DO QUIZ INTERATIVO SOBRE CURIOSIDADES DOS CAVALOS
+        ===================================================================== */
+        const perguntasQuiz = [
+            {
+                categoria: "Sentidos & Visão",
+                pergunta: "Qual é o campo de visão aproximado de um cavalo graças à posição lateral dos seus olhos?",
+                opcoes: [
+                    "Apenas 120 graus, semelhante à visão humana frontal",
+                    "Quase 350 graus ao redor do corpo, com apenas dois pequenos pontos cegos",
+                    "180 graus exatos, enxergando apenas para os lados",
+                    "360 graus completos sem nenhum ponto cego"
+                ],
+                correta: 1,
+                explicacao: "Por terem os olhos posicionados nas laterais da cabeça, os cavalos possuem uma visão panorâmica de quase 350°, tendo pontos cegos apenas bem à frente do focinho e diretamente atrás da garupa."
+            },
+            {
+                categoria: "Anatomia & Descanso",
+                pergunta: "Como os cavalos conseguem dormir em pé sem cair?",
+                opcoes: [
+                    "Eles nunca dormem, apenas fecham os olhos por segundos",
+                    "Possuem um 'aparelho de sustentação' de ligamentos e tendões que trava as articulações das pernas sem gasto muscular",
+                    "Apoiam-se sempre nas paredes das baias para descansar",
+                    "Dormem em pé apenas quando são filhotes"
+                ],
+                correta: 1,
+                explicacao: "Os cavalos contam com um mecanismo anatômico chamado 'aparelho de permanência' (stay apparatus), que trava os joelhos e jarretes permitindo cochilos em pé. Porém, para atingir o sono REM profundo, eles precisam deitar por alguns períodos."
+            },
+            {
+                categoria: "Comportamento & Comunicação",
+                pergunta: "O que significa quando um cavalo coloca as duas orelhas totalmente achatadas para trás, coladas na nuca?",
+                opcoes: [
+                    "Que ele está com sono e muito relaxado",
+                    "Que está atento apenas aos sons vindos de longe",
+                    "Sinal de alerta máximo, irritação, medo ou postura defensiva",
+                    "Que está com fome e pedindo ração"
+                ],
+                correta: 2,
+                explicacao: "As orelhas dos cavalos possuem 10 músculos independentes e funcionam como um radar emocional: orelhas achatadas para trás indicam desconforto, dor ou advertência antes de um possível coice ou mordida."
+            },
+            {
+                categoria: "Fisiologia Equina",
+                pergunta: "Qual é a frequência cardíaca normal de um cavalo adulto em repouso?",
+                opcoes: [
+                    "Entre 28 e 44 batimentos por minuto",
+                    "Entre 90 e 120 batimentos por minuto",
+                    "Mais de 180 batimentos por minuto",
+                    "Exatamente 75 batimentos por minuto, igual aos humanos"
+                ],
+                correta: 0,
+                explicacao: "Em repouso, o coração de um cavalo adulto bate devagar (28 a 44 bpm), mas durante um galope intenso pode ultrapassar 220 batimentos por minuto para oxigenar sua grande massa muscular!"
+            },
+            {
+                categoria: "Raças Nacionais",
+                pergunta: "Qual raça equina genuinamente brasileira teve origem no Sul de Minas Gerais e é famosa mundialmente pela marcha batida e picada?",
+                opcoes: [
+                    "Quarto de Milha",
+                    "Puro Sangue Inglês",
+                    "Mangalarga Marchador",
+                    "Árabe"
+                ],
+                correta: 2,
+                explicacao: "O Mangalarga Marchador surgiu no século XIX no Sul de Minas Gerais (Fazenda Campo Alegre) e se destaca pela marcha cômoda, resistência e docilidade."
+            },
+            {
+                categoria: "Reprodução & Ciclo de Vida",
+                pergunta: "Quanto tempo dura, em média, a gestação de uma égua?",
+                opcoes: [
+                    "5 meses (cerca de 150 dias)",
+                    "9 meses (cerca de 270 dias)",
+                    "11 meses (cerca de 330 a 340 dias)",
+                    "15 meses (cerca de 450 dias)"
+                ],
+                correta: 2,
+                explicacao: "A gestação de uma égua dura cerca de 11 meses (entre 330 e 340 dias), e o potro já nasce capaz de ficar em pé e caminhar poucas horas após o nascimento."
+            },
+            {
+                categoria: "Sistema Digestivo",
+                pergunta: "Qual característica importante diferencia o sistema digestivo dos cavalos da maioria dos mamíferos?",
+                opcoes: [
+                    "Eles possuem quatro estômagos como os bois",
+                    "Eles não conseguem vomitar devido a uma válvula muscular muito forte na entrada do estômago",
+                    "Eles digerem alimentos apenas à noite",
+                    "Eles não precisam beber água diariamente"
+                ],
+                correta: 1,
+                explicacao: "O esfíncter cárdico na entrada do estômago do cavalo é extremamente forte e impede o refluxo. Por isso, alimentos fermentados ou em excesso podem causar cólicas graves, exigindo manejo alimentar rigoroso."
+            }
+        ];
+
+        let indicePerguntaAtual = 0;
+        let pontuacaoQuiz = 0;
+        let acertosQuiz = 0;
+        let perguntaRespondida = false;
+
+        function carregarPerguntaQuiz() {
+            perguntaRespondida = false;
+            const atual = perguntasQuiz[indicePerguntaAtual];
+            const total = perguntasQuiz.length;
+
+            // Atualiza textos e barra de progresso
+            document.getElementById("quizProgressoTexto").textContent = `Pergunta ${indicePerguntaAtual + 1} de ${total}`;
+            document.getElementById("quizPontuacaoAtual").textContent = pontuacaoQuiz;
+            document.getElementById("quizBarraProgresso").style.width = `${((indicePerguntaAtual + 1) / total) * 100}%`;
+            document.getElementById("quizCategoriaTag").textContent = atual.categoria;
+            document.getElementById("quizPerguntaTitulo").textContent = atual.pergunta;
+
+            // Esconde feedback e botão próximo
+            const feedbackBox = document.getElementById("quizFeedbackBox");
+            feedbackBox.classList.add("hidden");
+            const btnProxima = document.getElementById("btnProximaPergunta");
+            btnProxima.classList.add("hidden");
+
+            // Renderiza opções
+            const containerOpcoes = document.getElementById("quizOpcoesContainer");
+            const letras = ["A", "B", "C", "D"];
+
+            containerOpcoes.innerHTML = atual.opcoes.map((opcao, idx) => `
+                <button type="button"
+                        onclick="verificarRespostaQuiz(${idx})"
+                        id="opcaoQuiz-${idx}"
+                        class="w-full text-left p-4 rounded-xl border-2 border-areia bg-white hover:border-couro hover:bg-areia/40 transition-all flex items-center gap-3.5 group">
+                    <span class="w-8 h-8 rounded-lg bg-areia text-couro font-bold text-sm flex items-center justify-center shrink-0 group-hover:bg-couro group-hover:text-white transition-colors">
+                        ${letras[idx]}
+                    </span>
+                    <span class="text-sm sm:text-base font-medium text-[#2B2421]">${opcao}</span>
+                </button>
+            `).join("");
+        }
+
+        function verificarRespostaQuiz(indiceEscolhido) {
+            if (perguntaRespondida) return;
+            perguntaRespondida = true;
+
+            const atual = perguntasQuiz[indicePerguntaAtual];
+            const acertou = indiceEscolhido === atual.correta;
+
+            // Desabilita todos os botões e colore correta/incorreta
+            atual.opcoes.forEach((_, idx) => {
+                const btn = document.getElementById(`opcaoQuiz-${idx}`);
+                btn.disabled = true;
+                btn.classList.remove("hover:border-couro", "hover:bg-areia/40");
+
+                if (idx === atual.correta) {
+                    btn.classList.remove("border-areia", "bg-white");
+                    btn.classList.add("border-campo", "bg-campo/15");
+                } else if (idx === indiceEscolhido && !acertou) {
+                    btn.classList.remove("border-areia", "bg-white");
+                    btn.classList.add("border-terracota", "bg-terracota/15");
+                }
+            });
+
+            // Atualiza pontuação e exibe explicação
+            const feedbackBox = document.getElementById("quizFeedbackBox");
+            const feedbackTitulo = document.getElementById("quizFeedbackTitulo");
+            const feedbackExplicacao = document.getElementById("quizFeedbackExplicacao");
+
+            feedbackBox.classList.remove("hidden", "bg-campo/15", "border-campo", "text-campo-dark", "bg-terracota/15", "border-terracota", "text-terracota-dark");
+
+            if (acertou) {
+                pontuacaoQuiz += 100;
+                acertosQuiz += 1;
+                document.getElementById("quizPontuacaoAtual").textContent = pontuacaoQuiz;
+                feedbackBox.classList.add("bg-campo/15", "border-campo", "text-campo-dark");
+                feedbackTitulo.textContent = "✓ Resposta Correta! (+100 pontos)";
+            } else {
+                feedbackBox.classList.add("bg-terracota/15", "border-terracota", "text-terracota-dark");
+                feedbackTitulo.textContent = "✕ Não foi dessa vez!";
+            }
+
+            feedbackExplicacao.textContent = atual.explicacao;
+
+            // Exibe botão de avançar
+            const btnProxima = document.getElementById("btnProximaPergunta");
+            const textoBtn = document.getElementById("textoBtnProxima");
+            textoBtn.textContent = (indicePerguntaAtual === perguntasQuiz.length - 1) ? "Ver Resultado Final" : "Próxima Pergunta";
+            btnProxima.classList.remove("hidden");
+        }
+
+        function proximaPerguntaQuiz() {
+            indicePerguntaAtual++;
+            if (indicePerguntaAtual < perguntasQuiz.length) {
+                carregarPerguntaQuiz();
+            } else {
+                exibirResultadoFinalQuiz();
+            }
+        }
+
+        function exibirResultadoFinalQuiz() {
+            document.getElementById("quizContainerAtivo").classList.add("hidden");
+            const resultadoBox = document.getElementById("quizResultadoContainer");
+            resultadoBox.classList.remove("hidden");
+
+            document.getElementById("quizAcertosFinais").textContent = acertosQuiz;
+            document.getElementById("quizPontosFinais").textContent = pontuacaoQuiz;
+
+            const patenteEl = document.getElementById("quizPatenteTitulo");
+            const msgEl = document.getElementById("quizMensagemFinal");
+            const iconeEl = document.getElementById("quizMedalhaIcone");
+
+            if (acertosQuiz >= 6) {
+                iconeEl.textContent = "🏆";
+                patenteEl.textContent = "Mestre do Haras";
+                msgEl.textContent = "Parabéns! Você domina profundamente o universo dos cavalos, seu comportamento, anatomia e tradições eqüestres.";
+            } else if (acertosQuiz >= 4) {
+                iconeEl.textContent = "🐎";
+                patenteEl.textContent = "Cavaleiro Experiente";
+                msgEl.textContent = "Muito bem! Você já conhece ótimas curiosidades sobre o manejo e a vida dos cavalos no campo.";
+            } else {
+                iconeEl.textContent = "🤠";
+                patenteEl.textContent = "Peão Iniciante";
+                msgEl.textContent = "Bom começo na lida! Leia as notícias e guias do portal e refaça o desafio para alcançar o posto de Mestre do Haras.";
+            }
+        }
+
+        function reiniciarQuiz() {
+            indicePerguntaAtual = 0;
+            pontuacaoQuiz = 0;
+            acertosQuiz = 0;
+            document.getElementById("quizResultadoContainer").classList.add("hidden");
+            document.getElementById("quizContainerAtivo").classList.remove("hidden");
+            carregarPerguntaQuiz();
+        }
+
+        /* =====================================================================
+           2. ABAS INTERATIVAS DA SEÇÃO MODA COUNTRY (ESTILO E VESTIMENTAS)
+        ===================================================================== */
+        const dadosModaCountry = {
+            feminino: {
+                titulo: "Moda Country Feminina: Elegância Sertaneja",
+                descricao: "Combina a delicadeza de bordados e franjas com a resistência do couro e do jeans de corte ajustado.",
+                itens: [
+                    { nome: "Botas Texanas & Botinhas Bordadas", detalhe: "Bico fino ou quadrado com desenhos florais em relevo ou gravação rústica." },
+                    { nome: "Jaquetas & Coletes com Franjas", detalhe: "Peças em camurça ou couro que trazem movimento ao visual em rodeios e festas." },
+                    { nome: "Calças Jeans Flare & Bootcut", detalhe: "Modelagem pensada para vestir perfeitamente sobre o cano da bota." },
+                    { nome: "Camisas Xadrez & Chemises", detalhe: "Tecidos leves em algodão com botões de pressão madrepérola." }
+                ]
+            },
+            masculino: {
+                titulo: "Moda Country Masculina: Tradição e Resistência",
+                descricao: "Inspirada no vestuário clássico do homem do campo, unindo durabilidade na lida e presença marcante.",
+                itens: [
+                    { nome: "Camisas Xadrez & Lisas de Corte Reto", detalhe: "Confeccionadas em algodão encorpado para conforto térmico no sol ou na noite." },
+                    { nome: "Calças Jeans Tradicionais (Carpinteiro/Cowboy)", detalhe: "Costuras reforçadas e cintura ajustada para uso com cintos largos." },
+                    { nome: "Botinas de Couro & Botas Bico Quadrado", detalhe: "Solado antiderrapante ideal tanto para estribos quanto para eventos." },
+                    { nome: "Coletes de Couro & Jaquetas Puffer/Lona", detalhe: "Proteção extra contra o vento nas manhãs frias da fazenda." }
+                ]
+            },
+            infantil: {
+                titulo: "Moda Country Infantil: Tradição Desde Cedo",
+                descricao: "Roupas confortáveis, flexíveis e cheias de charme para os pequenos acompanharem a família nas cavalgadas.",
+                itens: [
+                    { nome: "Botinhas Infantis Macias", detalhe: "Solado flexível e fechamento prático em elástico ou zíper lateral." },
+                    { nome: "Camisas Xadrez & Jardineiras Jeans", detalhe: "Permitem total liberdade de movimento para brincar ao ar livre." },
+                    { nome: "Mini Chapéus de Palha & Feltro", detalhe: "Proteção solar com acabamento leve adaptado ao tamanho infantil." }
+                ]
+            },
+            acessorios: {
+                titulo: "Acessórios Unissex: Os Detalhes que Fazem a Diferença",
+                descricao: "Os acessórios definem a identidade visual country e carregam simbolismos da cultura agro.",
+                itens: [
+                    { nome: "Chapéus de Palha (Shantung/Bangora) e Feltro", detalhe: "Palha para dias quentes e trabalho diurno; feltro estruturado para eventos noturnos e inverno." },
+                    { nome: "Cintos de Couro Entalhado com Fivelas", detalhe: "Fivelas trabalhadas em metal com motivos de cavalos, ferraduras e laços." },
+                    { nome: "Lenços & Bandanas de Pescoço", detalhe: "Clássico acessório funcional usado para proteção contra poeira nas cavalgadas." }
+                ]
+            }
+        };
+
+        function mudarAbaModa(chave) {
+            // Atualiza visual dos botões
+            document.querySelectorAll(".aba-moda").forEach(btn => {
+                if (btn.dataset.aba === chave) {
+                    btn.className = "aba-moda px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-couro text-white shadow transition-all";
+                } else {
+                    btn.className = "aba-moda px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-areia text-couro hover:bg-couro/15 transition-all";
+                }
+            });
+
+            const dado = dadosModaCountry[chave];
+            const painel = document.getElementById("painelModaCountry");
+
+            painel.innerHTML = `
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-couro mb-2">${dado.titulo}</h3>
+                <p class="text-sm text-gray-600 mb-5">${dado.descricao}</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    ${dado.itens.map(item => `
+                        <div class="p-4 rounded-xl bg-creme border border-areia">
+                            <h4 class="font-bold text-sm text-terracota mb-1">✦ ${item.nome}</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">${item.detalhe}</p>
+                        </div>
+                    `).join("")}
+                </div>
+            `;
+        }
+
+        /* =====================================================================
+           3. MODAL DE RESUMOS DAS NOTÍCIAS SOBRE CAVALOS
+        ===================================================================== */
+        const resumosNoticias = {
+            higiene: {
+                fonte: "Canal Rural • Manejo & Bem-Estar",
+                titulo: "Cuidados essenciais com higiene, escovação e banho dos cavalos",
+                link: "https://www.canalrural.com.br/pecuaria/cavalo/",
+                texto: `
+                    <p><strong>1. Escovação antes e depois da montaria:</strong> Antes de colocar a manta e a sela, escovar o dorso remove areia e barro seco que poderiam causar assaduras graves sob o peso do cavaleiro.</p>
+                    <p><strong>2. Banhos moderados:</strong> O excesso de sabão retira a oleosidade natural que impermeabiliza a pele do cavalo. Utilize produtos neutros específicos para equinos e retire o excesso de água com rodo próprio.</p>
+                    <p><strong>3. Limpeza dos cascos:</strong> Utilize o limpador de cascos diariamente para remover pedras e esterco acumulados na ranilha, prevenindo infecções como a broca de casco.</p>
+                `
+            },
+            nutricao: {
+                fonte: "Compre Rural • Saúde & Nutrição Equina",
+                titulo: "Alimentação equilibrada e prevenção de cólicas em equinos",
+                link: "https://www.comprerural.com/category/pecuaria/equinos/",
+                texto: `
+                    <p><strong>1. Base alimentar em volumoso:</strong> Pelo menos 70% a 80% da dieta diária de um cavalo deve ser composta por forragem (pasto verde de boa qualidade ou feno livre de mofo).</p>
+                    <p><strong>2. Fracionamento da ração:</strong> Nunca forneça grandes quantidades de ração concentrada de uma única vez. Divida em 2 a 3 tratos diários para evitar sobrecarga gástrica e cólicas.</p>
+                    <p><strong>3. Água limpa e sal mineral:</strong> Um cavalo adulto bebe entre 30 e 50 litros de água por dia, podendo chegar a 70 litros em dias muito quentes ou após exercícios.</p>
+                `
+            },
+            cascos: {
+                fonte: "Globo Rural • Equideocultura & Aprumos",
+                titulo: "Equideocultura brasileira: raças nacionais e cuidados com cascos",
+                link: "https://globorural.globo.com/pecuaria/",
+                texto: `
+                    <p><strong>1. 'Sem casco não há cavalo':</strong> Esse antigo ditado do campo resume a importância dos membros na locomoção e saúde geral do equino.</p>
+                    <p><strong>2. Manutenção periódica:</strong> O casco cresce continuamente (cerca de 6 a 10 mm por mês). O acompanhamento de um ferrador profissional a cada 45 dias mantém o equilíbrio articular e evita sobrecarga nos tendões.</p>
+                    <p><strong>3. Destaque nacional:</strong> Raças como Mangalarga Marchador, Crioulo e Campolina demonstram a força da seleção genética brasileira voltada à resistência e funcionalidade.</p>
+                `
+            }
+        };
+
+        function abrirResumoNoticia(chave) {
+            const dados = resumosNoticias[chave];
+            document.getElementById("modalResumoFonte").textContent = dados.fonte;
+            document.getElementById("modalResumoTitulo").textContent = dados.titulo;
+            document.getElementById("modalResumoTexto").innerHTML = dados.texto;
+            document.getElementById("modalResumoLinkExterno").href = dados.link;
+
+            const modal = document.getElementById("modalResumo");
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+        }
+
+        function fecharResumoNoticia() {
+            const modal = document.getElementById("modalResumo");
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+        }
+
+        // Fechar modal clicando fora do cartão
+        document.getElementById("modalResumo").addEventListener("click", (e) => {
+            if (e.target.id === "modalResumo") {
+                fecharResumoNoticia();
+            }
+        });
+
+        /* =====================================================================
+           4. MENU MOBILE & FORMULÁRIO DE CONTATO COM TOAST
+        ===================================================================== */
+        function toggleMenuMobile() {
+            const menu = document.getElementById("mobileMenu");
+            const btn = document.getElementById("btnMobileMenu");
+            const iconOpen = document.getElementById("iconOpen");
+            const iconClose = document.getElementById("iconClose");
+
+            const isHidden = menu.classList.toggle("hidden");
+            btn.setAttribute("aria-expanded", String(!isHidden));
+            iconOpen.classList.toggle("hidden");
+            iconClose.classList.toggle("hidden");
+        }
+
+        function fecharMenuMobile() {
+            const menu = document.getElementById("mobileMenu");
+            const btn = document.getElementById("btnMobileMenu");
+            const iconOpen = document.getElementById("iconOpen");
+            const iconClose = document.getElementById("iconClose");
+
+            menu.classList.add("hidden");
+            btn.setAttribute("aria-expanded", "false");
+            iconOpen.classList.remove("hidden");
+            iconClose.classList.add("hidden");
+        }
+
+        let toastTimeout;
+        function mostrarToast(mensagem) {
+            const toast = document.getElementById("toastNotificacao");
+            document.getElementById("toastTexto").textContent = mensagem;
+            toast.classList.remove("hidden");
+            toast.classList.add("flex");
+
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add("hidden");
+                toast.classList.remove("flex");
+            }, 4000);
+        }
+
+        function enviarFormularioContato(event) {
+            event.preventDefault();
+            const nome = document.getElementById("contatoNome").value.trim();
+            mostrarToast(`Obrigado, ${nome}! Sua mensagem foi enviada ao portal Estilo Rural.`);
+            event.target.reset();
+        }
+
+        /* =====================================================================
+           5. INICIALIZAÇÃO DA PÁGINA
+        ===================================================================== */
+        document.addEventListener("DOMContentLoaded", () => {
+            carregarPerguntaQuiz();
+            mudarAbaModa("feminino");
+        });
+    </script>
+</body>
+</html>
